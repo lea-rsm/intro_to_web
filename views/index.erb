@@ -1,6 +1,9 @@
-<h1> My name is
-<%=%w(Léa Cal Charles).sample%> </h1>
-<div>
+<% if @name %>
+<h1>
+   My name is <%= @name %>
+</h1>
+<% end %>
 
+<div>
  <img style='border: 5px dashed #A6C0C5;'src='http://bit.ly/1eze8aE'>
 </div>

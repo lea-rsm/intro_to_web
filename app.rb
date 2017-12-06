@@ -9,6 +9,18 @@ get '/' do
   'Charles keeps talking about the Manthing'
 end
 
-get '/cat' do
-erb(:index)
+get '/random-cat' do
+  @name = %w(Léa Cal Charles).sample
+  erb(:index)
+end
+
+post '/named-cat' do
+  p params
+  @name = params[:name]
+  erb(:index)
+end
+
+get '/form' do
+  erb(:form)
+
 end
